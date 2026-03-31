@@ -18,6 +18,12 @@ A reusable pi package that warns when a session starts getting too close to the 
 
 ## Install
 
+From npm:
+
+```bash
+pi install npm:@claaslange/pi-context-budget
+```
+
 From git:
 
 ```bash
@@ -33,7 +39,7 @@ pi install .
 Project-local install:
 
 ```bash
-pi install -l git:github.com/claaslange/pi-context-budget
+pi install -l npm:@claaslange/pi-context-budget
 ```
 
 ## Development

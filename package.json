@@ -1,16 +1,40 @@
 {
-  "name": "pi-context-budget",
+  "name": "@claaslange/pi-context-budget",
   "version": "0.1.0",
   "description": "Pi extension that warns when conversation context usage crosses configured thresholds.",
   "type": "module",
-  "keywords": ["pi-package"],
+  "keywords": [
+    "pi-package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claaslange/pi-context-budget.git"
+  },
+  "homepage": "https://github.com/claaslange/pi-context-budget#readme",
+  "bugs": {
+    "url": "https://github.com/claaslange/pi-context-budget/issues"
+  },
+  "files": [
+    "extensions",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "pi": {
-    "extensions": ["./extensions/context-budget-warning.ts"]
+    "extensions": [
+      "./extensions/context-budget-warning.ts"
+    ]
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"
   },
   "scripts": {
     "check": "tsc --noEmit --target ES2022 --module nodenext --moduleResolution nodenext --skipLibCheck ./extensions/context-budget-warning.ts"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "~0.64.0",
+    "@types/node": "~25.5.0",
+    "typescript": "~6.0.2"
   }
 }
