@@ -1,5 +1,5 @@
 {
-  "name": "pi-context-budget-warning",
+  "name": "pi-context-budget",
   "version": "0.1.0",
   "description": "Pi extension that warns when conversation context usage crosses configured thresholds.",
   "type": "module",

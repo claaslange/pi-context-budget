@@ -1,4 +1,4 @@
-# pi-context-budget-warning
+# pi-context-budget
 
 A reusable pi package that warns when a session starts getting too close to the model's context limit.
 
@@ -21,7 +21,7 @@ A reusable pi package that warns when a session starts getting too close to the 
 From git:
 
 ```bash
-pi install git:github.com/claaslange/pi-context-budget-warning
+pi install git:github.com/claaslange/pi-context-budget
 ```
 
 From a local checkout:
@@ -33,7 +33,7 @@ pi install .
 Project-local install:
 
 ```bash
-pi install -l git:github.com/claaslange/pi-context-budget-warning
+pi install -l git:github.com/claaslange/pi-context-budget
 ```
 
 ## Development
