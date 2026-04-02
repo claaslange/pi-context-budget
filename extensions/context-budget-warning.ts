@@ -79,22 +79,16 @@ function updateUi(ctx: ExtensionContext): number | null {
 	const percent = formatPercent(tokens, contextWindow);
 	const theme = ctx.ui.theme;
 	const currentLevel = getWarningLevel(tokens)!;
-	const nextThreshold = WARNING_THRESHOLDS.find((threshold) => tokens < threshold);
-
-	const lines = [
-		theme.fg(
-			currentLevel.color,
-			`${currentLevel.title}: ${formatTokens(currentLevel.threshold)} reached${percent ? ` (${percent})` : ""}`,
-		),
-		theme.fg("dim", `Current usage: ${formatTokens(tokens)} tokens.`),
-		theme.fg("dim", currentLevel.advice),
-	];
-
-	if (nextThreshold) {
-		lines.push(theme.fg("dim", `Next warning at ${formatTokens(nextThreshold)}.`));
-	}
-
-	ctx.ui.setWidget(WIDGET_ID, lines, { placement: "belowEditor" });
+	ctx.ui.setWidget(
+		WIDGET_ID,
+		[
+			theme.fg(
+				currentLevel.color,
+				`${currentLevel.title}: ${formatTokens(currentLevel.threshold)} reached${percent ? ` (${percent})` : ""}`,
+			),
+		],
+		{ placement: "belowEditor" },
+	);
 	return tokens;
 }
 
